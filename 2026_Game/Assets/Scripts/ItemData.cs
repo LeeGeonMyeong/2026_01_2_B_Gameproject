@@ -5,10 +5,10 @@ using System;
 public class ItemData
 {
     public int id;
-    public string Itemname;
+    public string itemName;
     public string description;
     public string nameEng;
-    public string ItemTypeString;
+    public string itemTypeString;
 
     [NonSerialized]
     public ItemType itemType;
@@ -21,13 +21,13 @@ public class ItemData
 
     public void InitalizeEnums()
     {
-        if(Enum.TryParse(ItemTypeString,out ItemType parsedType))
+        if(Enum.TryParse(itemTypeString,out ItemType parsedType))
         {
             itemType = parsedType;
         }
         else
         {
-            Debug.LogError($"아이템 '{Itemname} 에 유효하지 않은 아이템 타입 :{ItemTypeString}");
+            Debug.LogError($"아이템 '{itemName} 에 유효하지 않은 아이템 타입 :{itemTypeString}");
 
             itemType = ItemType.Consumable;
         }
