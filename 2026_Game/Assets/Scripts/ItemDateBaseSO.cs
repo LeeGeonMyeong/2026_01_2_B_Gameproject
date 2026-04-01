@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEditor.Rendering.BuiltIn.ShaderGraph;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ItemDateBaseSO", menuName = "Scriptable Objects/ItemDateBaseSO")]
+[CreateAssetMenu(fileName = "ItemDateBaseSO", menuName = "Inventory/ItemDateBaseSO")]
 public class ItemDateBaseSO : ScriptableObject
 {
     public List<ItemSO> items = new List<ItemSO>();                                         //ItemSO를 리스트로 관리한다.
