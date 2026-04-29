@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -16,6 +17,7 @@ public class CardManager : MonoBehaviour
      public List<GameObject> cardObjects = new List<GameObject>();              //실제 카드 게임 오브젝트들
 
      public CharacterStats playerStats;
+     public CharacterStats enemyStats;
 
     private static CardManager instance;
 
@@ -73,7 +75,7 @@ public class CardManager : MonoBehaviour
 
         while (tempDeck.Count > 0)                              //랜덤하기 섞기
         {
-            int randIndex = Random.Range(0, tempDeck.Count);
+            int randIndex = UnityEngine.Random.Range(0, tempDeck.Count);
             deckCards.Add(tempDeck[randIndex]);
             tempDeck.RemoveAt(randIndex);
         }
